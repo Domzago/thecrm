@@ -1,0 +1,19 @@
+{% extends 'crm/base.html' %}
+
+{% block title %}Add Record{% endblock %}
+
+{% block content %}
+<div class="col-md-6 offset-md-3">
+    <strong class="text-center">ADD RECORD</strong>
+    <br>
+
+    <form method="POST" action="">
+        {% csrf_token %}
+
+        {{ form.as_p }}
+
+        <br/>
+        <button type="submit" class="btn btn-secondary">Add Record</button>
+    </form>
+</div>
+{% endblock %}

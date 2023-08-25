@@ -1,0 +1,20 @@
+{% extends 'crm/base.html' %}
+
+{% block title %}Update Record{% endblock %}
+
+{% block content %}
+<div class="col-md-6 offset-md-3">
+    <strong class="text-center">UPDATE RECORD</strong>
+    <br>
+
+    <form method="POST" action="">
+        {% csrf_token %}
+
+        {{ form.as_p }}
+
+        <br/>
+        <button type="submit" class="btn btn-secondary">Update Record</button>
+
+    </form>
+</div>
+{% endblock %}
